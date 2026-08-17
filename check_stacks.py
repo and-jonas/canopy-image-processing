@@ -1,8 +1,6 @@
 from pathlib import Path
-import re
 from collections import defaultdict
 import cv2
-import pandas as pd
 from tqdm import tqdm
 import utils
 import csv
@@ -88,10 +86,12 @@ for camera_dir in BASE.rglob("Camera*"):
     if not camera_dir.parents[0].name == "20260622_Uitikon":
         continue
 
+    print(f'PROCESSING: ', {camera_dir})
+
     # Group directories by their last 5 characters
     groups = defaultdict(list)
 
-    for plot_dir in camera_dir.iterdir():
+    for plot_dir in tqdm(camera_dir.iterdir(), desc="Processing plots"):
 
         if not plot_dir.is_dir():
             continue
@@ -127,7 +127,6 @@ for camera_dir in BASE.rglob("Camera*"):
             # print(image_path.name)
             # if not image_path.name == '1H2A0919.JPG':
             #     continue    
-            print(image_path)
             img = cv2.imread(str(image_path))
             marker, score = utils.find_bw_marker(img)
 
