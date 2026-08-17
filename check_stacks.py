@@ -91,7 +91,7 @@ for camera_dir in BASE.rglob("Camera*"):
     # Group directories by their last 5 characters
     groups = defaultdict(list)
 
-    for plot_dir in tqdm(camera_dir.iterdir(), desc="Processing plots"):
+    for plot_dir in camera_dir.iterdir()):
 
         if not plot_dir.is_dir():
             continue
@@ -104,7 +104,7 @@ for camera_dir in BASE.rglob("Camera*"):
         groups[group_id].append(plot_dir)
 
     # Process each plot group
-    for group_id, plot_dirs in groups.items():
+    for group_id, plot_dirs in tqdm(groups.items(), desc="Processing plots"):
 
         # if not group_id == '00778':
         #     continue
