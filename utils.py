@@ -356,8 +356,8 @@ def find_bw_marker(
             corners.keys()
         )[best_idx]
 
-    print("Selected:", best_corner)
-    print("Score:", scores[best_idx])
+    # print("Selected:", best_corner)
+    # print("Score:", scores[best_idx])
 
     # =============================================================
     # Common colour scale
