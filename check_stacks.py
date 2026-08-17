@@ -8,7 +8,9 @@ import utils
 import csv
 
 # base path
-BASE = Path("O:/Data-Work/22_Plant_Production-CH/224_Digitalisation/Jonas_Anderegg_Files/B_Data/03_PreDiMix/Uitikon/")
+# BASE = Path("O:/Data-Work/22_Plant_Production-CH/224_Digitalisation/Jonas_Anderegg_Files/B_Data/03_PreDiMix/Uitikon/")
+BASE = Path("/agroscope/Data-Work-CH/22_Plant_Production-CH/224_Digitalisation/Jonas_Anderegg_Files/B_Data/03_PreDiMix/Uitikon/")
+
 
 # # =================================================================================================
 # # Ensure that a multiple of 15 images is present for each plot
