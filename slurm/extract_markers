@@ -1,4 +1,4 @@
-l#!/bin/bash
+#!/bin/bash
 
 #SBATCH --job-name=sshd
 #SBATCH --time=04:00:00
