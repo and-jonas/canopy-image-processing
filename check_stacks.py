@@ -83,8 +83,8 @@ with open(csv_path, "w", newline="", encoding="utf-8") as fh:
 
 for camera_dir in BASE.rglob("Camera*"):
 
-    if not camera_dir.parents[0].name == "20260622_Uitikon":
-        continue
+    # if not camera_dir.parents[0].name == "20260622_Uitikon":
+    #     continue
 
     print(f'PROCESSING: ', {camera_dir})
 
