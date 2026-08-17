@@ -91,7 +91,7 @@ for camera_dir in BASE.rglob("Camera*"):
     # Group directories by their last 5 characters
     groups = defaultdict(list)
 
-    for plot_dir in camera_dir.iterdir()):
+    for plot_dir in camera_dir.iterdir():
 
         if not plot_dir.is_dir():
             continue
